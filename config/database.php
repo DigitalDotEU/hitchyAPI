@@ -76,14 +76,17 @@ return [
             ====================== heroku =====================
         */
         'mysql' => array(
-            'driver'    => 'mysql',
+            'driver' => 'mysql',
+            'port' => env('DB_PORT', '3306'),
             'host'      => $host,
             'database'  => $database,
             'username'  => $username,
             'password'  => $password,
-            'charset'   => 'utf8',
+            'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
         ),
         /*
             ====================== heroku =====================
